@@ -48,6 +48,8 @@
             this.lnkLogin = new System.Windows.Forms.LinkLabel();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.comboBoxAccountType = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +128,7 @@
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(111, 219);
+            this.comboBoxType.Location = new System.Drawing.Point(111, 247);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(100, 21);
             this.comboBoxType.TabIndex = 8;
@@ -134,7 +136,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(40, 222);
+            this.label9.Location = new System.Drawing.Point(40, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 13);
             this.label9.TabIndex = 9;
@@ -195,7 +197,7 @@
             this.lnkLogin.AutoSize = true;
             this.lnkLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lnkLogin.Location = new System.Drawing.Point(1, 335);
+            this.lnkLogin.Location = new System.Drawing.Point(1, 383);
             this.lnkLogin.Name = "lnkLogin";
             this.lnkLogin.Size = new System.Drawing.Size(234, 17);
             this.lnkLogin.TabIndex = 18;
@@ -205,7 +207,7 @@
             // 
             // buttonRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(11, 255);
+            this.buttonRegister.Location = new System.Drawing.Point(11, 303);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(211, 42);
             this.buttonRegister.TabIndex = 19;
@@ -215,7 +217,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(12, 303);
+            this.buttonClear.Location = new System.Drawing.Point(12, 351);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(211, 29);
             this.buttonClear.TabIndex = 20;
@@ -223,11 +225,31 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // comboBoxAccountType
+            // 
+            this.comboBoxAccountType.FormattingEnabled = true;
+            this.comboBoxAccountType.Location = new System.Drawing.Point(111, 220);
+            this.comboBoxAccountType.Name = "comboBoxAccountType";
+            this.comboBoxAccountType.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxAccountType.TabIndex = 21;
+            this.comboBoxAccountType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAccountType_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(28, 223);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Account Type:";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 355);
+            this.ClientSize = new System.Drawing.Size(235, 402);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxAccountType);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.lnkLogin);
@@ -277,5 +299,7 @@
         private System.Windows.Forms.LinkLabel lnkLogin;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.ComboBox comboBoxAccountType;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientScreen.Designer.cs">
+      <DependentUpon>ClientScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorScreen.Designer.cs">
+      <DependentUpon>InstructorScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
+    <EmbeddedResource Include="AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientScreen.resx">
+      <DependentUpon>ClientScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorScreen.resx">
+      <DependentUpon>InstructorScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

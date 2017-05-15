@@ -14,12 +14,19 @@ namespace LoginAndRegister
   {
     //Creates the list that hold the driver types
     List<string> types = new List<string>();
+        //Create the account types list to allow the usert to select their account type to register
+        List<string> accountType = new List<string>();
     public Register()
     {
       InitializeComponent();
             types.Add("New");
             types.Add("Experienced");
+            types.Add("Not Applicable");
+            accountType.Add("Client");
+            accountType.Add("Administrator");
+            accountType.Add("Instructor");
             comboBoxType.DataSource = types;
+            comboBoxAccountType.DataSource = accountType;
             textBoxPassword1.PasswordChar = '*';
             textBoxPassword1.MaxLength = 16;
             textBoxPassword2.PasswordChar = '*';
@@ -50,7 +57,7 @@ namespace LoginAndRegister
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             //Creates variables used to store all of the users input from the registration form
-            string username = "", password = "", password2 = "", firstname = "", lastname = "", email = "", phone = "", drivertype = "";
+            string username = "", password = "", password2 = "", firstname = "", lastname = "", email = "", phone = "", drivertype = "", account = "";
             //Check that all of the textboxes have data in them
             if (!hasText())
             {
@@ -62,7 +69,7 @@ namespace LoginAndRegister
             //Using a try catch as users input may be invalid
             try
             {
-                //Get all of the data fro  the textboxes
+                //Get all of the data from  the textboxes
                 username = textBoxUsername.Text.Trim();
                 password = textBoxPassword1.Text.Trim();
                 password2 = textBoxPassword2.Text.Trim();
@@ -70,6 +77,7 @@ namespace LoginAndRegister
                 lastname = textBoxLName.Text.Trim();
                 email = textBoxEmail.Text.Trim();
                 phone = textBoxPhone.Text.Trim();
+                account = accountType[comboBoxAccountType.SelectedIndex].ToString();
                 drivertype = types[comboBoxType.SelectedIndex].ToString();
 
                 //Check to see if the passwords match, if not then display a message telling them,
@@ -94,7 +102,15 @@ namespace LoginAndRegister
             //send the users input to the database
             try
             {
-                SQL.executeQuery("INSERT INTO clients VALUES('"+username+"','" +password+"','" +firstname+"','" +lastname+"','" +email+"','" +phone+"','" +drivertype+"')");
+                //Check which table to add the user to
+                if (account == "Client")
+                    SQL.executeQuery("INSERT INTO clients VALUES('" + username + "','" + password + "','" + firstname + "','" + lastname + "','" + email + "','" + phone + "','" + drivertype + "')");
+                else if (account == "Instructor")
+                    SQL.executeQuery("insert into instructors values('" + username + "','" + password + "','" + firstname + "','" + lastname + "','" + email + "','" + phone + "')");
+                else if (account == "Administrator")
+                    SQL.executeQuery("insert into adminStaff values('" + username + "','" + password + "','" + firstname + "','" + lastname + "','" + email + "')");
+                else MessageBox.Show("Please select an account type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
             }
             //If there is an error wit the data being sent to the database 
             catch
@@ -150,6 +166,21 @@ namespace LoginAndRegister
         private void buttonClear_Click(object sender, EventArgs e)
         {
             clearTextboxes();
+        }
+
+        private void comboBoxAccountType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string type = accountType[comboBoxAccountType.SelectedIndex].ToString();
+
+            if(type != "Client")
+            {
+                comboBoxType.SelectedIndex = 2;
+                comboBoxType.Enabled = false;
+            }
+            else
+            {
+                comboBoxType.Enabled = true;
+            }
         }
     }
     }

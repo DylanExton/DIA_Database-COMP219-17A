@@ -11,7 +11,7 @@ namespace Timeslot_Generator
     class SQL
     {
         //Creates a conneection to the database
-        public static SqlConnection con = new SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#4BC4EE87\tsql\query;Database=master;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#21501B51\tsql\query;Database=master;Integrated Security=True");
         public static SqlCommand cmd = new SqlCommand();
         public static SqlDataReader read;
 

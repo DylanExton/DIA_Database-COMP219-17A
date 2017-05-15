@@ -15,6 +15,7 @@ namespace LoginAndRegister
 
         //list that hold the possible user types
         List<string> accounts = new List<string>();
+        public static string username;
 
         /// <summary>
         /// Initialises the form, and creates the list of possible user types
@@ -88,6 +89,40 @@ namespace LoginAndRegister
                 else if(userType.Equals("adminStaff")) userType = "Administrator";
                 else if (userType.Equals("instructors")) userType = "Instructor";
                 MessageBox.Show("Hello " + firstname + " " + lastname + ". You are now logged in as a " + userType, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Show the next screen for the right person
+                if (userType == "Administrator")
+                {
+                    //Send the username across to the next form
+
+                    //Show the administrators screen
+                    this.Hide();
+                    AdminScreen ad = new AdminScreen();
+                    ad. getInfo(username, firstname, lastname);
+                    ad.ShowDialog();
+                    this.Close();
+                }
+                else if(userType == "Instructor")
+                {   //Send the username over to the next form
+
+                    //Show the instructors screen
+                    this.Hide();
+                    InstructorScreen ins = new InstructorScreen();
+                    ins.getInfo(username, firstname, lastname);
+                    ins.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    //send the username over to the next form
+
+                    //Show the clients screen
+                    this.Hide();
+                    ClientScreen cli = new ClientScreen();
+                    cli.getInfo(username, firstname, lastname);
+                    cli.ShowDialog();
+                    this.Close();
+                }
             }
           //if there was no successful login, show a message box says so
             else

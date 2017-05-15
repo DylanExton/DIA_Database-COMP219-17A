@@ -8,3 +8,16 @@ C:\Users\Dylan Exton\OneDrive\COMP219-17A\Project - Driving Academy Database\Del
 C:\Users\Dylan Exton\OneDrive\COMP219-17A\Project - Driving Academy Database\Deliverable 2\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.exe
 C:\Users\Dylan Exton\OneDrive\COMP219-17A\Project - Driving Academy Database\Deliverable 2\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.pdb
 C:\Users\Dylan Exton\OneDrive\COMP219-17A\Project - Driving Academy Database\Deliverable 2\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.csprojResolveAssemblyReference.cache
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\bin\Debug\LoginAndRegister.exe.config
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\bin\Debug\LoginAndRegister.exe
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\bin\Debug\LoginAndRegister.pdb
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.csprojResolveAssemblyReference.cache
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.Login.resources
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.Properties.Resources.resources
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.Register.resources
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.csproj.GenerateResource.Cache
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.exe
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.pdb
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.ClientScreen.resources
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.InstructorScreen.resources
+D:\GitHub Repositories\DIA_Database-COMP219-17A\Deliverable 3\LoginAndRegister\LoginAndRegister\obj\Debug\LoginAndRegister.AdminScreen.resources
