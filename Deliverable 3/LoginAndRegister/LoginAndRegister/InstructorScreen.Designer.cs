@@ -84,6 +84,7 @@
             // 
             // comboBoxDates
             // 
+            this.comboBoxDates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDates.FormattingEnabled = true;
             this.comboBoxDates.Location = new System.Drawing.Point(129, 52);
             this.comboBoxDates.Name = "comboBoxDates";
@@ -102,6 +103,7 @@
             // 
             // comboBoxTimes
             // 
+            this.comboBoxTimes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTimes.FormattingEnabled = true;
             this.comboBoxTimes.Location = new System.Drawing.Point(304, 52);
             this.comboBoxTimes.Name = "comboBoxTimes";
@@ -129,6 +131,7 @@
             // 
             // comboBoxSlots
             // 
+            this.comboBoxSlots.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSlots.FormattingEnabled = true;
             this.comboBoxSlots.Location = new System.Drawing.Point(464, 52);
             this.comboBoxSlots.Name = "comboBoxSlots";
