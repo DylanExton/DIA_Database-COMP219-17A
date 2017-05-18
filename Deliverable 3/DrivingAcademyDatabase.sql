@@ -44,14 +44,15 @@ create table instructors(
 create table cars(
 	licence_no varchar(10) NOT NULL,
 	make varchar(16),
+	spare int,
 	PRIMARY KEY(licence_no)
 )
 
 --Timeslots--
 create table timeslots(
 	slot_id int NOT NULL,
-	slotTime time NOT NULL,
-	slotDate date NOT NULL,
+	slotTime varchar(10) NOT NULL,
+	slotDate varchar(10) NOT NULL,
 	PRIMARY KEY(slot_id, slotTime, slotDate)
 )
 
@@ -59,9 +60,9 @@ create table timeslots(
 create table appointments(
 	appointment_id int NOT NULL,
 	notes varchar(max),
-	slot_id int,
-	slotDate date,
-	slotTime time,
+	slot_id int NOT NULL,
+	slotDate varchar(10) NOT NULL,
+	slotTime varchar(10) NOT NULL,
 	client_id varchar(20),
 	car_id varchar(10),
 	instructor_id varchar(20),
@@ -114,11 +115,11 @@ insert into clientTypes values('Experienced', 100.00, 2)
 insert into clientTypes values('New', 50, 5)
 
 --Cars (5 cars, differing makes and models)--
-insert into cars values('JKH458','Mazda')
-insert into cars values('LEF835','Nissan')
-insert into cars values('THR456','Holden')
-insert into cars values('HJI906','Ford')
-insert into cars values('DGE345','Fiat')
+insert into cars values('JKH458','Mazda',0)
+insert into cars values('LEF835','Nissan',0)
+insert into cars values('THR456','Holden',0)
+insert into cars values('HJI906','Ford',0)
+insert into cars values('DGE345','Fiat',0)
 
 --Instructors (4 instructors)--
 insert into instructors values('dte7','abc123','Dylan','Exton','gfhd@gmail.com','025641542')
@@ -137,6 +138,8 @@ select * from cars
 select * from instructors
 select * from documents
 select * from timeslots order by slotDate ASC
-select * from appointments
+select * from appointments where confirmed = 1
 select * from clientTypes
 select * from adminStaff
+
+SELECT slotTime, appointment_id from appointments where instructor_id like 'q' and slotDate like '2017-01-01' and client_id is null and confirmed = 1
